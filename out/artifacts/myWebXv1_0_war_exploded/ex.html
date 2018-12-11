@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/getinput" method="post">
+
+
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="text" class="form-control" name="userName" placeholder="请输入用户名"/>
+        </div>
+
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" class="form-control" name="password" placeholder="请输入密码"/>
+        </div>
+
+        <div class="form-group">
+            <label>验证码</label>&nbsp;<img id="confide" src="/confirm" onclick="refreshConfirmCode()"/>
+            <input type="text" class="form-control" name="confirmcode" placeholder="请输入验证码"/>
+        </div>
+
+        <select name="sel">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">3</option>
+        </select>
+
+        <input type="radio" name="sex" value="m"/>woman<input type="radio" name="sex" value="fam"/><br/>
+
+        <input type="checkbox" name="hobby" value="run"/>r<input type="checkbox" name="hobby" value="jump"/>j<input
+            type="checkbox" name="hobby" value="laugh"/>l
+
+        <input type="submit" value="sign">
+
+
+    </form>
+</div>
+</body>
+</html>

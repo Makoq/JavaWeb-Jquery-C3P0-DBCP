@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var $city;
+
+            //绑定数据
+            $("#city").data("data1","hello");
+
+            //绑定事件
+            $("#city").click(function () {
+               alert("hei!")
+            });
+
+            //remove
+            $("#remove").click(function () {
+
+                $city=$("#city").remove();
+            });
+            //detach
+            $("#det").click(function () {
+                $city=$("#city").detach();
+            });
+            //append
+            $("#append").click(function () {
+                $("body").append($city);
+            });
+            //获取data数据
+            $("#data").click(function () {
+                alert($("#city").data("data1"));
+            });
+
+
+        })
+    </script>
+</head>
+<body>
+
+    <button id="remove">rem</button>
+    <button id="append">app</button>
+    <button id="det">det</button>
+    <button id="data">dat</button>
+
+        <ul id="city">
+            <li id="bj">北京</li>
+            <li id="sh">上海</li>
+            <li id="gz">广州</li>
+
+        </ul>
+    <p class="hello">how are youboy</p>
+
+</body>
+</html>

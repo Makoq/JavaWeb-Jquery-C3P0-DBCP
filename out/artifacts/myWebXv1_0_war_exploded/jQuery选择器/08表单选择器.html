@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#one").click(function () {
+
+                $("#form:input").css("background-color","#ff0")
+            });
+
+
+        })
+    </script>
+
+</head>
+<body>
+    <form action="#" method="post">
+        <input id="one" type="hidden" value="hidden"/><br/>
+        <input id="two" type="button" value="btn"/><br/>
+        <input id="three" type="text" value="text"/><br/>
+        <input id="four" type="password" value="password"/><br/>
+        <input type="file"/><br/>
+        <textarea></textarea><br/>
+        <select><option>123</option><option>456</option></select>
+        01<input id="five" type="checkbox"/>&nbsp;02<input type="checkbox"/>&nbsp;03<input type="checkbox"/><br/>
+        01<input id="six" type="radio"/>02<input type="radio"/>03<input type="radio"/>04<input type="radio"/><br/>
+
+    </form>
+</body>
+</html>

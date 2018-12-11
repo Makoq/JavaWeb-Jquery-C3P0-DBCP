@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //选择索引值为-1的元素,即最后的一个元素
+            $("#btn1").click(function () {
+                $("div").eq(-1).css("background-color","#ff0");
+
+            });
+            //选择第一个元素
+            $("#btn2").click(function () {
+                $("div").first().css("background-color","#ff0");
+            });
+            //显示隐藏元素
+            $("#btn3").click(function () {
+                $("#2-1").css("background-color","#ff0").show(1000);
+
+            });
+            //hasClass,#1的div是否含有为noe的class
+            $("#btn4").click(function () {
+               alert($("#1").hasClass("noe")) ;
+
+            });
+            //filter过滤
+            $("#btn5").click(function () {
+                $("div").filter(".noe").css("background-color","#ff0")
+            });
+            //筛选出含有div的div
+            $("#btn6").click(function () {
+                $("div").has("div").css("background-color","#ff0")
+            });
+            //筛选样式为one div子元素没有title属性的div
+            $("#btn7").click(function () {
+                $("div.one div").not("[title]").css("background-color","#ff0")
+            });
+            //利用filter筛选样式为one div子元素有title属性的div
+            $("#btn8").click(function () {
+                $("div.one div").filter("[title]").css("background-color","#ff0")
+            });
+            //slice截取
+            $("#btn9").click(function () {
+                $("div").slice(0,1).css("background-color","#ff0")
+            });
+
+
+
+        })
+    </script>
+</head>
+<body>
+
+<button id="btn1">btn1</button>
+<button id="btn2">btn2</button>
+<button id="btn3">btn3</button>
+<button id="btn4">btn4</button>
+<button id="btn5">btn5</button>
+<button id="btn6">btn6</button>
+<button id="btn7">btn7</button>
+<button id="btn8">btn8</button>
+<button id="btn9">btn9</button>
+
+<div id="1" class="noe" style="background-color:lavender;width: 100px;height: 100px"></div>
+<div id="2" class="one" style="background-color:sandybrown;width: 100px;height: 100px">
+    <div title="1" style="width: 50px;height: 50px;background-color: #2ecc71"></div>
+    <div style="width: 50px;height: 50px;background-color: #6610f2"></div>
+</div>
+<div id="2-1" style="display:none;background-color:sandybrown;width: 100px;height: 100px"></div>
+<div id="3" style="background-color:#abdde5;width: 100px;height: 100px"></div>
+<div id="4" style="background-color:#f5c6cb;width: 100px;height: 100px"></div>
+</body>
+</html>

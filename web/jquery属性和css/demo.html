@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //设置text不可用 attr(k,v)
+            $("#disabled").click(function () {
+                $("#usnme").attr("disabled","disabled");
+            });
+
+            //设置text可用 removeAttr("name")
+            $("#enabled").click(function () {
+                $("#usnme").removeAttr("disabled");
+            });
+
+            //切换背景颜色
+            $("#“btnpt”").click(function () {
+                $("#usnme").toggle("textClass");
+
+            });
+
+            //添加一组值，类似json格式，css(prop)
+            $("div").css({
+                "border":"1px solid #999",
+                "height":"100px",
+                "width":"100px",
+                "font-size":"40px",
+                "color":"red"
+            })
+
+
+        });
+    </script>
+
+    <style type="text/css">
+        .textClass{
+            background-color: #c69500;
+        }
+
+    </style>
+
+</head>
+<body>
+<form>
+    <table >
+         <tr>
+            <td>
+                <label>姓名:</label>
+            </td>
+
+             <td>
+                <input class="textClass" type="text" id="usnme" name="username" value="lan"/>
+            </td>
+             <td>
+                 <input type="button" id="disabled" value="disabled"/>
+             </td>
+             <td>
+                 <input type="button" id="enabled" value="enabled"/>
+             </td>
+         </tr>
+
+        <tr>
+            <td>
+                密码:
+            </td>
+            <td>
+                <input type="password"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                性别:
+            </td>
+            <td>
+                <input type="radio"/>男<input type="radio"/>女
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                我的照片:
+            </td>
+            <td>
+                <input type="file"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                学历:
+            </td>
+            <td>
+                <select>
+                    <option>大专</option>
+                    <option>学士</option>
+                    <option>硕士</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+            </td>
+            <td>
+               <button id=“btnpt” type="button">普通按钮</button>
+                <button type="button">提交按钮</button>
+                <button type="button">重置按钮</button>
+            </td>
+        </tr>
+    </table>
+
+    <div>
+        欢迎登陆
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //有class属性的div
+            $("#btn1").click(function () {
+                $("div[class]").css("background-color","#ff0").show()
+            });
+            //有class=mini属性的div
+            $("#btn2").click(function () {
+                $("div[class='one']").css("background-color","#ff0").show()
+            });
+            //有class!=mini属性的div
+            $("#btn3").click(function () {
+                $("div[class!='one']").css("background-color","#ff0").show()
+            });
+            //^,$,*了解就行
+
+            //复合选择器,选择有id的，再选择class=one的
+            $("#btn4").click(function () {
+                $("div[id][class='one']").css("background-color","#ff0").show()
+            })
+
+
+        })
+    </script>
+
+</head>
+<body>
+<input type="button" id="btn1" value="select all div in body"/>
+<input type="button" id="btn2" value="select first in div"/>
+<input type="button" id="btn3" value="select first bro"/>
+<input type="button" id="btn4" value="select all bro"/>
+
+<div id="one" class="one" style="background-color: #2ecc71;width: 200px;height: 100px">di</div>
+<div  style="background-color: #c69500;width: 200px;height: 100px"></div>
+<div class="one" style=" width: 200px;height: 100px"></div>
+<div id="three" style="background-color: #0059ff;width: 200px;height: 100px"></div>
+
+</body>
+</html>

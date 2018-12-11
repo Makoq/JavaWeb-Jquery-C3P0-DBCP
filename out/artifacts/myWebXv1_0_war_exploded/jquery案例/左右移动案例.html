@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //左移动到右边
+            $("#m").click(function () {
+
+                $("#left option:selected:first").prependTo($("#right"));
+            });
+
+            $("#mm").click(function () {
+                $("#left option:selected").prependTo($("#right"));
+            });
+
+            $("#mmm").click(function () {
+                $("#left option").prependTo($("#right"));
+
+            });
+
+
+            //右移到左边
+            $("#lm").click(function () {
+                $("#right option:selected").prependTo($("#left"));
+            });
+
+            $("#lmm").click(function () {
+                $("#right option:selected").prependTo($("#left"));
+            });
+            $("#lmmm").click(function () {
+                $("#right option").prependTo($("#left"));
+            })
+        })
+    </script>
+</head>
+<body>
+<table>
+<tr>
+    <td>
+        <select  multiple="multiple" id="left" style="width: 100px;height: 100px">
+            <option  >one</option>
+            <option>two</option>
+            <option>three</option>
+        </select>
+
+    </td>
+
+    <td>
+
+        <input id="m" type="button" style="width: 50px" value=">"/><br/>
+        <input id="mm" type="button" style="width: 50px" value=">>"/><br/>
+        <input id="mmm" type="button" style="width: 50px" value=">>>"/><br/>
+        <input id="lm" type="button" style="width: 50px" value="<"/><br/>
+        <input id="lmm" type="button" style="width: 50px" value="<<"/><br/>
+        <input id="lmmm" type="button" style="width: 50px" value="<<<"/><br/>
+    </td>
+
+    <td>
+        <select  multiple="multiple"  id="right" style="width: 100px;height: 100px">
+            <option>1</option>
+            <option>12</option>
+            <option>123</option>
+        </select>
+
+    </td>
+
+</tr>
+</table>
+</body>
+</html>

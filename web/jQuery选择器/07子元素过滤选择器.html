@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //查找div的id为one下第二个div
+            $("#btn1").click(function () {
+                //有属性时，注意加空格，然后：nth-child
+                //$("div[id='one'] :nth-child(2)").css("background-color","#ff0");
+                //$("div#one :nth-child(2)").css("background-color","#ff0");
+                $("div #one-two").css("background-color","#ff0");
+            });
+            //不同方式查找div子元素
+            $("#btn2").click(function () {
+                $("#one :first-child").css("background-color","#ff0");
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" id="btn1" value="select all div in body"/>
+<input type="button" id="btn2" value="select first in div"/>
+<input type="button" id="btn3" value="select first bro"/>
+<input type="button" id="btn4" value="select all bro"/>
+
+<div id="one" style="background-color: #2ecc71;width: 200px;height: 100px">
+    <div id="one-one" style="background-color:#c82333;width: 100px;height: 50px">
+
+    </div>
+    <div id="one-two" style="background-color:#fd4f1a;width: 100px;height: 50px">
+
+    </div>
+</div>
+<div id="two" style="background-color: #c69500;width: 200px;height: 100px"></div>
+<div class="mini" style="display: none;width: 200px;height: 100px"></div>
+<div id="three" style="background-color: #0059ff;width: 200px;height: 100px"></div>
+
+</body>
+</html>

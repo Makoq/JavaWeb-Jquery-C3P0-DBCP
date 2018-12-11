@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //所有列表项默认是隐藏的
+            //分组可以点击，控制下面显示或隐藏
+            //只有一个显示
+
+            $("span").nextAll().hide();
+
+            $("span").click(function () {
+
+                $(this).nextAll().toggle();
+                $("span").not(this).nextAll().hide()
+               /* if($(this).nextAll().hide()){
+                    $(this).nextAll().show();
+
+                }
+                else{
+                    $(this).nextAll().hide();
+
+                }*/
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+
+<table>
+    <tr>
+        <td>
+            <div >
+                <span id="be" style="background-color: #50e51f">之前</span><br/>
+                <a>小学一年级</a><br/>
+                <a>小学二年级</a><br/>
+                <a>小学三年级</a><br/>
+            </div>
+        </td>
+
+        <td>
+            <div>
+                <span id="no" style="background-color: #3de516">现在</span><br/>
+                <a>研究生学一年级</a><br/>
+                <a>研究生学二年级</a><br/>
+                <a>研究生学三年级</a><br/>
+
+            </div>
+        </td>
+
+        <td>
+            <div>
+                <span id="fu" style="background-color: #46e51e">未来</span><br/>
+                <a>成年人五年</a><br/>
+                <a>成年人十年</a><br/>
+                <a>成年人一生</a><br/>
+
+            </div>
+        </td>
+
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>

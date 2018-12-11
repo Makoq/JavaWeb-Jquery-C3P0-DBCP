@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //常用切换3个
+            //高度和宽度同时变化切换
+            $("#btn1").click(function () {
+                $("#d1").toggle(1000);
+            });
+            //高度变化切换
+            $("#btn2").click(function () {
+                $("#d2").slideToggle("slow");
+            });
+            //淡入淡出变化切换
+            $("#btn3").click(function () {
+                $("#d3").fadeToggle("slow");
+            });
+
+
+            //隐藏，不常用
+            $("#btn4").click(function () {
+                $("#d4").slideUp();
+            });
+
+        })
+
+    </script>
+</head>
+<body>
+
+<input id="btn1" class="" type="button" value="toggle"/><br/>
+<div id="d1" style="width: 100px;height: 100px;border:#0b0b0b solid 1px;background-color: #2ecc71"></div>
+
+<input id="btn2" type="button" value="slidetoggle"/><br/>
+<div id="d2" style="width: 100px;height: 100px;border:#0b0b0b solid 1px;background-color: #b9cc4e"></div>
+
+<input id="btn3" type="button" value="fadetoggle"/><br/>
+<div id="d3" style="width: 100px;height: 100px;border:#0b0b0b solid 1px;background-color: #6accbd"></div>
+
+<input id="btn4" type="button" value="slideup"/>
+<div id="d4" style="width: 100px;height: 100px;border:#0b0b0b solid 1px;background-color: #cb9dcc"></div>
+
+</body>
+</html>

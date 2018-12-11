@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+</head>
+<body>
+<input type="text" id="username" value="jack"/>
+
+
+<script type="text/javascript" >
+    // *得到dom对象
+    var us=document.getElementById("username");
+    // *dom转为jquery
+    var $us=$(us);
+   // alert($us.val())
+    // *jquery转为dom
+    var us2=$us[0];
+    //var us2=$us.get(0) //第二种方式
+    alert(us2.value)
+
+
+</script>
+
+</body>
+</html>

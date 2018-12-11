@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //创建5个div
+            for (var i = 0; i <5 ; i++) {
+                creatediv();
+            }
+            //设置定时器
+            setInterval(showdiv);
+        });
+            //第一个div滑动显示
+        function showdiv() {
+            $("div:first").slideUp(1000,function() {
+                $("body").append($(this).slideDown())
+            });
+        }
+
+        var num=1;
+        function creatediv(){
+
+            var $div=$("<div style='border: #fd4f1a solid 2px;width: 600px;height: 100px;font-size:50px;margin: 20px'></div>");
+            $div.html(num++);
+            $("body").append($div);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

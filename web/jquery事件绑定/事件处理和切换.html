@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //点击一次后失效
+            $("#1").one("click",function () {
+                alert("you can see me only one time")
+            });
+            //可以点击多次
+            //jquery事件别名，格式：事件.别名，目的在于操作特定对象
+            $("#2").bind("click.a",function () {
+                alert("you can see me any time if you click")
+            });
+            $("#2").bind("click.b",function () {
+                alert("hello")
+            });
+
+            //解绑2
+            $("#3").bind("click",function () {
+                //利用jquery别名，解绑特定的事件
+                $("#2").unbind("click.a");
+            });
+            //添加按钮，样式为myClass,且拥有相同的事件
+            $(".myClass").live("click.addbutton",function () {
+                $("body").append("<input type='button' class='myClass' value='btn'><br/>");
+            });
+            //解绑
+            $("#5").live("click",function () {
+                $(".myClass").die("click.addbutton")
+            });
+            //toggle
+            //切换
+            $("#6").toggle(function () {
+                alert("1")
+            },function () {
+                alert("2")
+
+            },function () {
+                alert("3")
+
+            });
+            //鼠标移进移出
+            $("#di").hover(function () {
+               $("#sp").html("in div")
+            },function () {
+                $("#sp").html("out div")
+
+            })
+
+        })
+    </script>
+
+    <style type="text/css">
+        .myClass{
+            background-color: #a7f8fd;
+        }
+    </style>
+</head>
+<body>
+
+<input id="1" type="button" value="1只能点击一次，然后失效"/><br/>
+<input id="2" type="button" value="2可以点击多次"/><br/>
+<input id="3" type="button" value="3解绑2"/><br/>
+<input id="4" type="button" value="4添加按钮，样式为myClass,且拥有相同的事件" class="myClass"/><br/>
+<input id="5" type="button" value="5解绑4"/><br/>
+<input id="6" type="button" value="toggle"/><br/>
+
+<div id="di" style="background-color: #abdde5;height: 100px;width: 200px">
+    <span id="sp" ></span>
+</div>
+
+</body>
+</html>

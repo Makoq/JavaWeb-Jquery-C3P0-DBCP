@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //firstDiv
+            $("#btn1").click(function () {
+                $("div:first").css("background-color","#ff0")
+            });
+            //last
+            $("#btn2").click(function () {
+                $("div:last").css("background-color","#ff0")
+            });
+            //choose div but not #two
+            $("#btn3").click(function () {
+                $("div:not('#two')").css("background-color","#ff0");
+            });
+            //choose qll even(偶数)
+            $("#btn4").click(function () {
+                $("div:even").css("background-color","#ff0");
+            })
+            //choose index 2
+            $("#btn6").click(function () {
+                $("div:eq(2)").css("background-color","#ff0");
+            })
+            //choose <2
+            $("#btn7").click(function () {
+                $("div:lt(2)").css("background-color","#ff0");
+            })
+            //choose >2
+            $("#btn8").click(function () {
+                $("div:gt(2)").css("background-color","#ff0");
+            })
+            //choose all header
+            $("#btn9").click(function () {
+                $(":header").css("background-color","#ff0")
+            })
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+     
+    
+</head>
+<body>
+<h1>jquery exercise</h1>
+<input type="button" id="btn1" value="select all div in body"/>
+<input type="button" id="btn2" value="select first in div"/>
+<input type="button" id="btn3" value="select first bro"/>
+<input type="button" id="btn4" value="select all bro"/>
+<input type="button" id="btn5" value="select all bro except this"/>
+<input type="button" id="btn6" value="select all bro except this"/>
+<input type="button" id="btn7" value="select all bro except this"/>
+<input type="button" id="btn8" value="select all bro except this"/>
+<input type="button" id="btn9" value="select all bro except this"/>
+
+<div id="one" style="background-color: #2ecc71;width: 200px;height: 100px" ></div>
+<div id="two" style="background-color: #c69500;width: 200px;height: 100px" ></div>
+<div id="three" style="background-color: #0c5460;width: 200px;height: 100px" ></div>
+<div id="four" style="background-color: #0059ff;width: 200px;height: 100px" ></div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //事件冒泡，子元素事件执行时，触发父元素相同事件
+            $("#d1").click(function () {
+                alert("out")
+            });
+            //两种方式阻止事件冒泡
+            $("#d2").click(function (event) {
+                alert("in");
+                //1
+                //return false
+                //2.event函数
+                event.stopPropagation();
+            });
+
+            //阻止a标签浏览器默认事件href
+            $("a").click(function (event) {
+                alert("hello");
+                //同样两种方式
+                //1
+                //return false;
+                event.preventDefault()
+            })
+        })
+    </script>
+
+</head>
+<body>
+
+<div id="d1" style="width: 300px;height: 300px;border: #e51c2c solid 5px">
+    <div id="d2" style="height: 100px;width: 100px;border: #3de516 solid 5px"></div>
+</div>
+
+<a href="https://www.baidu.com">baidu</a>
+</body>
+</html>

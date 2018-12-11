@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //自带的提示，替换成自定义的提示
+
+
+            //event代表鼠标移动位置
+            $(".tooltip").hover(function (event) {
+
+                var $title=$(this).attr("title");
+                //创建元素
+                var $new=$("<div id='di' style='width:200px;height:20px;background-color: #bafdda'>xxx</div>");
+                $new.html($title);
+                //依据鼠标定位
+                $new.offset({"left":event.pageX ,"top":event.pageY});
+                //加入到body
+                $new.appendTo("body").show();
+            },function () {
+                $("#di").remove();
+            });
+
+            $(this).mousemove(function (event) {
+                $("#di").offset({"left":event.pageX+20 ,"top":event.pageY-20});
+            });
+
+            //新垣结衣点击显示
+            $("#x").hover(function () {
+                //创建元素
+                var $img=$("<div id='idiv' style='width: 400px;height: 400px'><img id='dimg' src='../img/xyjy.jpg' height='400px' width='400px'/></div>")
+
+                //加入到body
+                $img.appendTo("body").show();
+
+            },function () {
+                $("#idiv").remove();
+            });
+            $(this).mousemove(function (event) {
+                //移动定位
+                $("#idiv").offset({"left":event.pageX+50 ,"top":event.pageY-50});
+            });
+
+        })
+        
+    </script>
+</head>
+<body>
+    <p><a href="#" class="tooltip" title="这是我的超链接1">提示1</a></p>
+    <p><a href="#" class="tooltip" title="这是我的超链接2">提示2</a></p>
+
+    <div id="x" style="height:90px; width:100px;border: #0b0b0b solid">
+        <img src="../img/xyjy.jpg" height="90px" width="100px"/>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

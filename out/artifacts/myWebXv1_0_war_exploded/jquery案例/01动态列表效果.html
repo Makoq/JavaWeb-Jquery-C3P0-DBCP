@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //隐藏
+           var $allli=$("li:gt(3):not(:last)");
+           $allli.hide ();
+            //点击显示
+            $("span").click(function () {
+                //$allli.show();
+                //$allli.toggle();
+
+                //判断是否隐藏，并改变span文字
+                if($allli.is(":hidden")){
+                    $allli.show(1000);
+                    $(this).html("hidden");
+                }else{
+                    $allli.hide(1000);
+                    $(this).html("show");
+
+                }
+
+
+
+
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<ul>
+    <li><a href="#">i表示斜体</a><i>(123456)</i></li>
+    <li><a href="#">ul无序表</a><i>(12323236)</i></li>
+    <li><a href="#">ol有序表</a><i>(5432323)</i></li>
+    <li><a href="#">佳能</a><i>(32326)</i></li>
+    <li><a href="#">康佳</a><i>(88456)</i></li>
+    <li><a href="#">华硕</a><i>(78556)</i></li>
+    <li><a href="#">耐克</a><i>(78556)</i></li>
+    <li><a href="#">阿迪</a><i>(78556)</i></li>
+    <li><a href="#">最后的联想</a><i>(3423456)</i></li>
+</ul>
+<span>show</span>
+</body>
+</html>

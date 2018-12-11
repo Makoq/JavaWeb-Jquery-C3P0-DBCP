@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //将ny插入到china前面
+            $("#insertbefore").click(function () {
+                $("#china").prepend($("#ny"));
+            });
+
+            //将ny插入到china后面
+            $("#insertlast").click(function () {
+                $("#china").append($("#ny"));
+            });
+
+
+
+
+        })
+    </script>
+
+</head>
+<body>
+
+<button id="insertbefore">insertbefore</button>
+<button id="insertlast">insertlast</button>
+
+    <ul id="china">
+        <li id="bj" name="beijing">北京</li>
+        <li id="tj" name="tianjing">天津</li>
+        <li id="sh" name="shanghai">上海</li>
+        <li id="lz" name="lanzhou">兰州</li>
+    </ul>
+----------------------------------------------
+
+    <ul id="usa">
+        <li id="ny" name="niuyue">纽约</li>
+        <li id="xg" name="xianggang">华盛顿</li>
+        <li id="klfl" name="kelifulan">克利夫兰</li>
+        <li id="lsj" name="luoshanji">洛杉矶</li>
+    </ul>
+</body>
+</html>

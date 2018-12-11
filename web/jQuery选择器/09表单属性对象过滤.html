@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //给enable的input赋值
+            $("#btn1").click(function () {
+                //符合选择器，这里选择不是button和reset的，并且enabled的input，并赋值‘aaa'
+                $("input[type!='button'][type!='reset']:enabled").val("aaa");
+            });
+            //给disable的input赋值
+            $("#btn2").click(function () {
+                $("input:disabled").val("bbb")
+            });
+            //获取多选框中被默认checked的个数
+            $("#btn3").click(function () {
+               var cklenth=$("[name='checkbox'][checked='checked']").length;
+               //var cklenth=$("[name='checkbox'][checked='checked']").size();  //size和length一样的效果
+               alert(cklenth);
+            });
+            //获取select中，所有选中的内容,并追加到div里
+            $("#btn4").click(function () {
+               $(":selected").each(function () {
+                   //这里遍历的就是option了
+                   //alert($(this).val());
+                   //val()函数在有value时获取value值，没有时就获取text值
+                   //若就想要获得标签内容text，就可以用 html() 方法
+                   $("#“div01”").append($(this).val());
+               })
+            });
+
+        })
+
+    </script>
+
+</head>
+<body>
+<form action="#" method="post">
+    <input type="button" id="btn1" value="clickme"/><br/>
+    <input type="button" id="btn2" value="clickmedisabled"/><br/>
+    <input type="button" id="btn3" value="checkedlength"/><br/>
+    <input type="button" id="btn4" value="optionToDiv"/><br/>
+
+    disable<input type="text" name="" id="one" disabled="disabled"/><br/>
+    enabled<input type="text" id="two" /><br/>
+    disable<input type="text" id="three" disabled="disabled"/><br/>
+    enabled<input type="text" id="four" /><br/>
+    <input type="reset"/><br/>
+    <label>01</label>
+    <input name="checkbox" type="checkbox" checked="checked"/>02<input name="checkbox" type="checkbox"/>03<input name="checkbox" type="checkbox" checked="checked"/>04<input name="checkbox" type="checkbox"/><br/>
+
+    <select id="sel" multiple="multiple" style="height: 100px">
+        <option selected="selected">01</option>
+        <option>02</option>
+        <option selected="selected">03</option>
+        <option>04</option>
+    </select>
+</form>
+<div id=“div01” style="background-color: #2ecc71;width: 200px;height: 100px"></div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+姓<input id="ipt1" type="text" v-model="fnme" placeholder="firstname"/><br/>
+名<input id="ipt2" type="text" v-model="lnme" placeholder="lastname"/><br/><br/>
+名字(单向)<input id="funllname" type="text" placeholder="fullname" v-model="test1"/><br/>
+名字(单向)<input type="text" placeholder="lastname" v-model="fname2"/><br/>
+名字(双向）<input type="text" v-model="fnme3"/><br/>
+</div>
+
+</body>
+<script type="text/javascript" src="../js/vue/vuejs.js"></script>
+<script type="text/javascript">
+
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            fnme:"",
+            lnme:"",
+            fname2:""
+
+        },
+
+        //计算属性单向
+        computed:{
+
+            //什么时候执行：初始化显示/相关的data属性数据发生变化
+            //计算并返回当前属性的值
+            test1(){ //计算属性中的一个方法，方法的返回值作为属性值
+                console.log("test1")
+                return this.fnme +"   "+this.lnme;
+            },
+
+            //计算属性双向
+            fnme3:{
+                //回调函数(1.自己定义的 2.自己没有调用 3.最终执行了)   计算并返回当前属性的值
+                //回调函数要明确（1）什么时候调用和（2）用来做什么
+
+                //回调函数  当需要读取当前属性值时回调，根据相关的数据计算并返回当前属性的值
+
+                get(){
+
+                    return this.fnme +'/'+this.lnme;
+
+                },
+                //回调函数 /监视/当前属性的变化，当属性发生改变时回调，更新相关的属性数据
+                set(value){ //value就是fullname3的最新属性值
+                    var names=value.split('/')
+                    this.fnme-names[0]
+                    this.lnme=names[1]
+
+                }
+            }
+
+
+
+        },
+
+
+
+
+        //监听当中的回调函数
+        watch:{//配置监听
+            fnme:function (value) {//监视firstname
+                console.log(this) //this代表vue的一个实例，即vm
+
+                this.fname2=value+' '+this.lnme
+            }
+        }
+    });
+        vm.$watch("lnme",function (value) {
+        this.fname2=this.fnme+"  "+value;
+})
+</script>
+</html>

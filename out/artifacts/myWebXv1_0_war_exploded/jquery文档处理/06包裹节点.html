@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).click(function () {
+            $("#wrap").click(function () {
+                $("strong").wrap("<a></a>")
+            })
+
+        })
+    </script>
+</head>
+<body>
+        <button id="wrap">click</button>
+        <div>
+            <em>你好啊</em><br/>
+            <strong title="jquery">jquery</strong><br/>
+            <strong title="jquery">jquery</strong>
+        </div>
+</body>
+</html>

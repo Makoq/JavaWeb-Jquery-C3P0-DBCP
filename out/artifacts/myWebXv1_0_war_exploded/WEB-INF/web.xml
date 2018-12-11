@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>confirmServlet</servlet-name>
+        <servlet-class>servlet.response.cfmServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>confirmServlet</servlet-name>
+        <url-pattern>/confirm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>refreshServlet</servlet-name>
+        <servlet-class>servlet.response.refreshServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>refreshServlet</servlet-name>
+        <url-pattern>/ref</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>redict</servlet-name>
+        <servlet-class>servlet.response.redirectServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>redict</servlet-name>
+        <url-pattern>/red</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>resp</servlet-name>
+        <servlet-class>servlet.response.represpServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resp</servlet-name>
+        <url-pattern>/resp</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>requestServlet</servlet-name>
+        <servlet-class>servlet.request.requestServlet</servlet-class>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>requestServlet</servlet-name>
+        <url-pattern>/req</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reqHeaderServlet</servlet-name>
+        <servlet-class>servlet.request.reqHeaderServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>reqHeaderServlet</servlet-name>
+        <url-pattern>/reqheader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reqFormServlet</servlet-name>
+        <servlet-class>servlet.request.reqFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>reqFormServlet</servlet-name>
+        <url-pattern>/reqform</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>getInPutStreamServlet</servlet-name>
+        <servlet-class>servlet.request.getInPutStreamServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getInPutStreamServlet</servlet-name>
+        <url-pattern>/getinput</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ForwardServlet</servlet-name>
+        <servlet-class>servlet.request.forwardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ForwardServlet</servlet-name>
+        <url-pattern>/forward</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>receiveForwardServlet</servlet-name>
+        <servlet-class>servlet.request.receiveForwardServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>receiveForwardServlet</servlet-name>
+        <url-pattern>/receiveforward</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginweb</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registeServlet</servlet-name>
+        <servlet-class>servlet.registeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>registeServlet</servlet-name>
+        <url-pattern>/registe</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>sessionServlet</servlet-name>
+        <servlet-class>servlet.session.sessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>showAllBooksServlet</servlet-name>
+        <servlet-class>heimaexc.servlet.showAllBooksServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>showAllBooksServlet</servlet-name>
+        <url-pattern>/showbook</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>BookID=1Servlet</servlet-name>
+        <servlet-class>heimaexc.servlet.bookId1Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>BookID=1Servlet</servlet-name>
+        <url-pattern>/bokid</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>showcarServlet</servlet-name>
+        <servlet-class>heimaexc.servlet.shoppingCarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>showcarServlet</servlet-name>
+        <url-pattern>/shoppingcar</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>carServlet</servlet-name>
+        <servlet-class>heimaexc.servlet.shopcarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>carServlet</servlet-name>
+        <url-pattern>/car</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>chkcarServlet</servlet-name>
+        <servlet-class>heimaexc.servlet.checkshopcarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>chkcarServlet</servlet-name>
+        <url-pattern>/chk</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>tregServlet</servlet-name>
+        <servlet-class>TemplateWEB.servlet.regServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>tregServlet</servlet-name>
+        <url-pattern>/treg</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>tlogServlet</servlet-name>
+        <servlet-class>TemplateWEB.servlet.logServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>tlogServlet</servlet-name>
+        <url-pattern>/tlog</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>jquerySendDataServlet</servlet-name>
+        <servlet-class>jqueryServlet.sendDataServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jquerySendDataServlet</servlet-name>
+        <url-pattern>/jquerysenddata</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+    <welcome-file-list>
+        <welcome-file>jquery.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!--html 登陆-->
+   <!-- <welcome-file-list>
+        <welcome-file>login_page.html</welcome-file>
+    </welcome-file-list>-->
+
+    <!--jsp 登陆-->
+    <!--<welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>-->
+
+</web-app>

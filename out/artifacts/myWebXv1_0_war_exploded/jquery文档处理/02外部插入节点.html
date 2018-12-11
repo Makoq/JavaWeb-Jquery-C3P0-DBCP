@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //p1插到bj后面
+            $("#btn1").click(function () {
+                $("#bj").after($("#p1"));
+            });
+            //p1插到bj前面
+            $("#btn2").click(function () {
+                $("#bj").before($("#p1"));
+            });
+
+
+            //insertafter
+
+            //insertbefore
+        })
+    </script>
+
+</head>
+<body>
+        <button id="btn1">insertafter</button>
+        <button id="btn2">insertbefore</button>
+        <ul>
+            <li id="bj">北京</li>
+            <li id="sh">上海</li>
+            <li id="gz">广州</li>
+        </ul>
+-------------------------------------------------------
+        <p id="p1">this is p1</p>
+        <p id="p2">this is p2</p>
+        <p id="p3">this is p3</p>
+</body>
+</html>
