@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<script type="text/javascript" src="js/jquery/jquery-1.8.3.js"></script>
+
+<body >
+    <br><canvas id="123" height="500px" width="500px" >something..</canvas>
+
+    <div  style="width: 500px;height: 500px;border: 2px solid black">
+        <div id="dragobj" style="width: 100px;height: 100px;background-color: #fd4f1a" draggable="true"></div>
+    </div>
+    <div id="dragtarget" style="width: 500px;height: 500px;border: 2px solid black"></div>
+
+
+
+
+</body>
 <script type="text/javascript">
+
+    var drawing=document.getElementById("123");
+
+    window.addEventListener("load",()=>{
+        if(drawing.getContext){
+            var content=drawing.getContext("2d");
+
+            content.fillStyle="#ff0000";
+            content.fillRect(10,10,50,50);
+
+
+            content.fillStyle="rgba(0,0,225,0.5)";
+            content.fillRect(30,30,50,50);
+
+
+            content.clearRect(40,40,10,10);
+
+
+            content.beginPath();
+
+            content.moveTo(50,50);
+
+            content.moveTo(80,80);
+            content.lineTo(80,500);
+
+            content.stroke();
+        }
+    });
+
+    document.getElementById("dragtarget").addEventListener("dragover",(e)=>{
+        e.preventDefault();
+    });
+
+    document.getElementById("dragtarget").addEventListener("dragenter",(e)=>{
+        e.preventDefault();
+    });
+
+
+
+
+
+
 
 
 </script>
-<body>
-<div id="app">{{message}}}</div>
-</body>
 </html>

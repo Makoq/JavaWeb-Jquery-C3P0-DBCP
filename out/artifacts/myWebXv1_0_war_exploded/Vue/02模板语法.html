@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/vue/vuejs.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--将data显示到浏览器-->
+    <h1>{{msg}}</h1>
+    <!--将data显示到浏览器，并大写-->
+    <h1>{{msg.toUpperCase()}}</h1>
+    <!--将data显示到浏览器,利用v=html解析标签-->
+    <p v-html="msg"></p>
+    <!--将data显示到浏览器,利用v=html只显示文本，不解析-->
+    <p v-text="msg"></p>
+
+    <!--强制绑定，加一个图片-->
+    <img :src="imgUrl" alt="glri"><br/>
+
+    <!--绑定事件监听-->
+    <button @click="test">btn</button>
+    <button @click="test2('abv')">btn</button>
+    <button @click="test2(msg)">btn</button>
+
+</div>
+</body>
+
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+            msg:"<a href='https://www.baidu.com' >i will be back</a>",
+            imgUrl:"http://t1.27270.com/uploads/tu/201811/569/c3e671b419.jpg"
+        },
+        methods:{
+            test(){
+                alert("nihao")
+            },
+            test2(cont){
+                alert(cont)
+            }
+        }
+    });
+
+</script>
+</html>

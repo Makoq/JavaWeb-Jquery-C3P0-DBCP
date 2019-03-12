@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+<button  id="btn1" onclick="f2()">clickme</button>
+<script type="text/javascript">
+
+    window.onload=function(){
+        // document.write("<h1>ye</h1>")
+    };
+    function f(){
+        // document.getElementById("btn1").style.backgroundColor="red";
+
+        document.write("<h1 >addbtn</h1>")
+
+    };
+
+    async function f3(){
+
+        setTimeout(function () {
+
+          return 5;
+        },5000)
+    }
+
+
+    async function f2(){
+         var v= await f3();
+       console.log(v)
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    function f() {
+        var el =document.getElementById("d1");
+        if(el.nodeType==1){
+            // alert("node is an element"+el.nodeName)
+            alert(el.childNodes.length)
+        }
+    }
+    function f2() {
+        var imges=document.getElementsByTagName("img");
+        // var named=imges.namedItem("3")
+        console.log(document.getElementsByTagName("*"))
+
+    }
+
+    function f3() {
+        document.write("<h1>"+"hello"+"</h1>")
+    }
+
+</script>
+<body>
+<div id="d1">
+  <img src="123" name="1" >
+  <img src="345" name="2" >
+  <img src="456" name="3" >
+
+</div>
+<button onclick="f()">click</button>
+<button onclick="f2()">click</button>
+<button onclick="f3()">click</button>
+
+</body>
+
+</html>

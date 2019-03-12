@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"></script>
+    <link rel="stylesheet" href="css/excercise/vuestudy01.css">
+
+</head>
+<body>
+
+    <div id="app">
+        <input type="text" v-model.lazy="data"/>
+        <p>{{data}}</p>
+
+        <transition name="fade" mode="out-in" >
+            <button v-bind:key="ison" @click="ison=!ison" style="position: absolute;left: 20px;top: 200px;">
+                {{ ison ? 'on':'off'}}
+            </button>
+
+
+        </transition>
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript">
+    var vm =new Vue({
+        el:"#app",
+        data(){
+             return {
+
+                 data:"123",
+                 ison:true,
+             }
+        },
+        computed(){
+
+        }
+
+    });
+</script>
+
+</html>
